@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Sep  4 09:51:18 2023
+# Process ID: 11736
+# Current directory: F:/FPGA/zc706/uart/prj/uart.runs/synth_1
+# Command line: vivado.exe -log uart_loopback_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_loopback_top.tcl
+# Log file: F:/FPGA/zc706/uart/prj/uart.runs/synth_1/uart_loopback_top.vds
+# Journal file: F:/FPGA/zc706/uart/prj/uart.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source uart_loopback_top.tcl -notrace

@@ -1,0 +1,211 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Sep  4 09:00:34 2023
+# Process ID: 13188
+# Current directory: F:/FPGA/zc706/uart/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12188 F:\FPGA\zc706\uart\prj\uart.xpr
+# Log file: F:/FPGA/zc706/uart/prj/vivado.log
+# Journal file: F:/FPGA/zc706/uart/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/FPGA/zc706/uart/prj/uart.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'F:/FPGA/zc706/uart/prj/uart.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/vivado/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 1249.383 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3414] Connected to existing cs_server.
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A515F5
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2868.520 ; gain = 1619.137
+set_property PROGRAM.FILE {F:/FPGA/zc706/uart/prj/uart.runs/impl_1/uart_loopback_top.bit} [get_hw_devices xc7z045_1]
+current_hw_device [get_hw_devices xc7z045_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-2302] Device xc7z045 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251A515F5
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A515F5
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z045 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Mon Sep  4 09:28:22 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z045ffg900-2
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3304.016 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/FPGA/zc706/uart/prj/uart.srcs/constrs_1/new/UART.xdc]
+Finished Parsing XDC File [F:/FPGA/zc706/uart/prj/uart.srcs/constrs_1/new/UART.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3430.371 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 3625.648 ; gain = 657.402
+set_property mark_debug true [get_nets [list uart_rxd_IBUF]]
+set_property mark_debug true [get_nets [list uart_done]]
+set_property mark_debug true [get_nets [list {send_data[0]} {send_data[1]} {send_data[2]} {send_data[3]} {send_data[4]} {send_data[5]} {send_data[6]} {send_data[7]}]]
+set_property mark_debug true [get_nets [list send_en]]
+set_property mark_debug true [get_nets [list uart_tx_busy]]
+save_constraints
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list clk_BUFG ]]
+set_property port_width 8 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {send_data[0]} {send_data[1]} {send_data[2]} {send_data[3]} {send_data[4]} {send_data[5]} {send_data[6]} {send_data[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list send_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list uart_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list uart_rxd_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list uart_tx_busy ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 3653.938 ; gain = 0.000
+[Mon Sep  4 09:33:09 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+set_property PROBES.FILE {F:/FPGA/zc706/uart/prj/uart.runs/impl_1/uart_loopback_top.ltx} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {F:/FPGA/zc706/uart/prj/uart.runs/impl_1/uart_loopback_top.ltx} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {F:/FPGA/zc706/uart/prj/uart.runs/impl_1/uart_loopback_top.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3653.938 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-2302] Device xc7z045 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z045_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq8'bXXXX_XXXX [get_hw_probes send_data -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z045_1] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {F:/FPGA/zc706/uart/prj/uart.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw_manager
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/FPGA/zc706/uart/prj/uart.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Mon Sep  4 09:43:25 2023] Launched synth_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Mon Sep  4 09:44:08 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/FPGA/zc706/uart/prj/uart.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Mon Sep  4 09:45:24 2023] Launched synth_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Mon Sep  4 09:46:01 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/FPGA/zc706/uart/prj/uart.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Mon Sep  4 09:47:21 2023] Launched synth_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Mon Sep  4 09:48:02 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/FPGA/zc706/uart/prj/uart.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Mon Sep  4 09:49:03 2023] Launched synth_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Mon Sep  4 09:49:54 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/FPGA/zc706/uart/prj/uart.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Mon Sep  4 09:51:16 2023] Launched synth_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Mon Sep  4 09:52:00 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Mon Sep  4 09:53:52 2023] Launched impl_1...
+Run output will be captured here: F:/FPGA/zc706/uart/prj/uart.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.1
+  **** Build date : Jun 10 2021 at 20:17:23
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.1
+  ****** Build date   : May 27 2021-01:32:33
+    **** Build number : 2021.1.1622050353
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3685.836 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251A515F5
+set_property PROGRAM.FILE {F:/FPGA/zc706/uart/prj/uart.runs/impl_1/uart_loopback_top.bit} [get_hw_devices xc7z045_1]
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {F:/FPGA/zc706/uart/prj/uart.runs/impl_1/uart_loopback_top.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3685.836 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251A515F5
+close_hw_manager
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep  4 10:01:47 2023...

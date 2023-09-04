@@ -1,0 +1,10 @@
+0.7
+2020.2
+Jun 10 2021
+20:04:57
+F:/FPGA/zc706/uart/prj/uart.sim/sim_1/behav/xsim/glbl.v,1623370582,verilog,,,,glbl,,,,,,,,
+F:/FPGA/zc706/uart/rtl/tb_top.v,1693664363,verilog,,,,tb_top,,,,,,,,
+F:/FPGA/zc706/uart/rtl/uart_loop.v,1693653571,verilog,,F:/FPGA/zc706/uart/rtl/uart_loopback_top.v,,uart_loop,,,,,,,,
+F:/FPGA/zc706/uart/rtl/uart_loopback_top.v,1693663806,verilog,,F:/FPGA/zc706/uart/rtl/uart_recv.v,,uart_loopback_top,,,,,,,,
+F:/FPGA/zc706/uart/rtl/uart_recv.v,1693653571,verilog,,F:/FPGA/zc706/uart/rtl/uart_send.v,,uart_recv,,,,,,,,
+F:/FPGA/zc706/uart/rtl/uart_send.v,1693662625,verilog,,F:/FPGA/zc706/uart/rtl/tb_top.v,,uart_send,,,,,,,,

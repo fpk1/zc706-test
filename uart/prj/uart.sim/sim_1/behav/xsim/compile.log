@@ -1,0 +1,11 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/FPGA/zc706/uart/rtl/uart_loop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_loop
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/FPGA/zc706/uart/rtl/uart_loopback_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_loopback_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/FPGA/zc706/uart/rtl/uart_recv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_recv
+INFO: [VRFC 10-2458] undeclared symbol start_flag, assumed default net type wire [F:/FPGA/zc706/uart/rtl/uart_recv.v:46]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/FPGA/zc706/uart/rtl/uart_send.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_send
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/FPGA/zc706/uart/rtl/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
